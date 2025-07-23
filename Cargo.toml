@@ -12,6 +12,8 @@ members = [
     "substudy",
     # "substudy-ui",
     "libs/dict_manager",
+    "vobsub2png",
+    "vobsub",
 ]
 
 # Removed until I can update `nom` over 5 major releases.

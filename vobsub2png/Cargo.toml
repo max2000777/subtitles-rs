@@ -14,7 +14,7 @@ documentation = "https://github.com/emk/subtitles-rs/blob/master/vobsub2png/READ
 cli_test_dir = { version = "0.1", path = "../cli_test_dir" }
 
 [dependencies]
-common_failures = { version = "0.1", path = "../common_failures" }
+common_failures = { version = "0.2", path = "../deprecated/common_failures" }
 docopt = "1.1.1"
 env_logger = "0.11.2"
 failure = "0.1.1"
@@ -24,3 +24,4 @@ serde = "1.0"
 serde_derive = "1.0"
 serde_json = "1.0"
 vobsub = { version = "0.2", path = "../vobsub" }
+#cargo build --release -p vobsub2png
