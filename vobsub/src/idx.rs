@@ -50,7 +50,10 @@ pub type Palette = [Rgb<u8>; 16];
 
 named!(
     palette<Palette>,
-    map_res!(separated_list!(tag!(b", "), call!(rgb)), |vec: Vec<
+    map_res!(separated_list!(
+    delimited!(opt!(is_a!(" \t")), tag!(b","), opt!(is_a!(" \t"))),
+    call!(rgb)
+), |vec: Vec<
         Rgb<u8>,
     >| {
         if vec.len() != 16 {
